@@ -81,7 +81,7 @@ img{max-width:100%;display:block}
 .header{background:rgba(253,251,246,.96);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--gray-light);box-shadow:var(--shadow-sm)}
 .header-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 .logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.logo img{width:62px;height:62px;border-radius:50%;box-shadow:var(--shadow-sm)}
+.logo img{width:62px;height:62px;border-radius:50%;box-shadow:var(--shadow-sm);object-fit:cover;background:transparent;mix-blend-mode:multiply}
 .logo-text-main{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--navy);line-height:1.1}
 .logo-text-sub{font-size:.7rem;color:var(--gray);letter-spacing:1px;text-transform:uppercase}
 .nav{display:flex;gap:28px;align-items:center}
@@ -357,7 +357,7 @@ img{max-width:100%;display:block}
 .footer-col p,.footer-col a{color:rgba(253,248,238,.7);font-size:.88rem;text-decoration:none;line-height:1.9;display:block;margin-bottom:4px}
 .footer-col a:hover{color:var(--gold-light)}
 .footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-.footer-brand img{width:56px;height:56px;border-radius:50%}
+.footer-brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;mix-blend-mode:multiply}
 .footer-brand-text{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:#fff;font-weight:700}
 .footer-socials{display:flex;gap:12px;margin-top:16px}
 .footer-social{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(212,168,67,.2);display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--cream);font-size:1rem;transition:all .3s}
@@ -459,7 +459,7 @@ img{max-width:100%;display:block}
 .photo-main{border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/3;border:3px solid var(--gold)}
 .photo-main img{width:100%;height:100%;object-fit:cover}
 .photo-badge-logo{position:absolute;bottom:-20px;right:-20px;width:90px;height:90px;border-radius:50%;overflow:hidden;border:4px solid #fff;box-shadow:var(--shadow-md);background:#fff}
-.photo-badge-logo img{width:100%;height:100%;object-fit:cover}
+.photo-badge-logo img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
 .photo-badge-stat{position:absolute;top:-16px;left:-16px;background:var(--navy-dark);color:#fff;padding:12px 18px;border-radius:8px;box-shadow:var(--shadow-md);border:2px solid var(--gold);text-align:center}
 .pbs-num{display:block;font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold-light);font-weight:700;line-height:1}
 .pbs-text{font-size:.7rem;opacity:.8;letter-spacing:.5px;display:block;margin-top:2px}
@@ -507,7 +507,7 @@ img{max-width:100%;display:block}
 <header class="header">
   <div class="header-inner">
     <a href="#" class="logo">
-      <img src="logo.jpg" alt="Logo Văn phòng Thừa phát lại An Giang" loading="eager">
+      <img src="images/logo.jpg" alt="Logo Văn phòng Thừa phát lại An Giang" loading="eager">
       <div>
         <div class="logo-text-main">VPTPL An Giang</div>
         <div class="logo-text-sub">Trần Hải Quân · tpltranhaiquan.online</div>
@@ -528,7 +528,7 @@ img{max-width:100%;display:block}
 
 <!-- HERO -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="03-hop-tai-van-phong.jpg">
+  <video class="hero-video" autoplay muted loop playsinline poster="images/03-hop-tai-van-phong.jpg">
     <source src="videos/hero-tu-van.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
@@ -714,10 +714,10 @@ img{max-width:100%;display:block}
     <div class="about-grid">
       <div class="about-photo-stack reveal left">
         <div class="photo-main">
-          <img src="03-hop-tai-van-phong.jpg" alt="Đội ngũ Văn phòng Thừa phát lại An Giang họp tại văn phòng" loading="lazy">
+          <img src="images/03-hop-tai-van-phong.jpg" alt="Đội ngũ Văn phòng Thừa phát lại An Giang họp tại văn phòng" loading="lazy">
         </div>
         <div class="photo-badge-logo">
-          <img src="logo.jpg" alt="Logo VPTPL An Giang">
+          <img src="images/logo.jpg" alt="Logo VPTPL An Giang">
         </div>
         <div class="photo-badge-stat">
           <span class="pbs-num">10+</span>
@@ -774,23 +774,23 @@ img{max-width:100%;display:block}
     </div>
     <div class="gallery-grid">
       <div class="gallery-item reveal" onclick="openLightbox(0)">
-        <img src="lapvibang.jpg" alt="Đội ngũ thừa hành viên chuyên nghiệp" loading="lazy">
+        <img src="images/lapvibang.jpg" alt="Đội ngũ thừa hành viên chuyên nghiệp" loading="lazy">
         <div class="gallery-overlay"><span class="gallery-caption">Đội ngũ thừa hành viên chuyên nghiệp</span></div>
         <div class="gallery-icon">👥</div>
       </div>
       <div class="gallery-item reveal" style="transition-delay:.1s" onclick="openLightbox(1)">
-        <img src="01-trao-tien-cap-doi.jpg" alt="Lập vi bằng giao nhận tiền" loading="lazy">
+        <img src="images/01-trao-tien-cap-doi.jpg" alt="Lập vi bằng giao nhận tiền" loading="lazy">
         <div class="gallery-overlay"><span class="gallery-caption">Lập vi bằng giao nhận tiền</span></div>
         <div class="gallery-icon">📋</div>
       </div>
       <div class="gallery-item reveal" style="transition-delay:.2s" onclick="openLightbox(2)">
-        <img src="03-hop-tai-van-phong.jpg" alt="Tư vấn pháp lý tại văn phòng" loading="lazy">
+        <img src="images/03-hop-tai-van-phong.jpg" alt="Tư vấn pháp lý tại văn phòng" loading="lazy">
         <div class="gallery-overlay"><span class="gallery-caption">Tư vấn pháp lý tại văn phòng</span></div>
         <div class="gallery-icon">🏛️</div>
       </div>
       <div class="gallery-item reveal gallery-logo-card" style="transition-delay:.1s">
         <div class="gallery-logo-inner">
-          <img src="logo.jpg" alt="Logo Văn phòng Thừa phát lại An Giang" loading="lazy" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)">
+          <img src="images/logo.jpg" alt="Logo Văn phòng Thừa phát lại An Giang" loading="lazy" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)">
           <p style="color:var(--navy);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;margin-top:14px;text-align:center">VPTPL An Giang</p>
           <p style="color:var(--gray);font-size:.82rem;text-align:center;margin-top:4px">202 Lê Lợi, An Châu, An Giang</p>
           <a href="tel:0945432333" style="display:inline-block;margin-top:14px;background:var(--gold);color:var(--navy-dark);padding:8px 20px;border-radius:20px;font-size:.85rem;font-weight:600;text-decoration:none">📞 0945 432 333</a>
@@ -1013,7 +1013,7 @@ img{max-width:100%;display:block}
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-brand"><img src="logo.jpg" alt="Logo"><div class="footer-brand-text">VPTPL An Giang</div></div>
+        <div class="footer-brand"><img src="images/logo.jpg" alt="Logo"><div class="footer-brand-text">VPTPL An Giang</div></div>
         <p>Văn phòng Thừa phát lại An Giang (tiền thân VPTPL Trần Hải Quân) — đơn vị tiên phong trong lĩnh vực bổ trợ tư pháp tại An Giang.</p>
         <p style="margin-top:12px"><strong style="color:var(--gold-light)">MST:</strong> 1602153598</p>
         <div class="footer-socials">
@@ -1142,9 +1142,9 @@ setTimeout(()=>{document.getElementById('chatWidget').classList.add('show')},500
 
 // ═══ LIGHTBOX ═══
 const lbImages=[
-  {src:'lapvibang.jpg',cap:'Đội ngũ thừa hành viên chuyên nghiệp'},
-  {src:'01-trao-tien-cap-doi.jpg',cap:'Lập vi bằng giao nhận tiền'},
-  {src:'03-hop-tai-van-phong.jpg',cap:'Tư vấn pháp lý tại văn phòng'},
+  {src:'images/lapvibang.jpg',cap:'Đội ngũ thừa hành viên chuyên nghiệp'},
+  {src:'images/01-trao-tien-cap-doi.jpg',cap:'Lập vi bằng giao nhận tiền'},
+  {src:'images/03-hop-tai-van-phong.jpg',cap:'Tư vấn pháp lý tại văn phòng'},
 ];
 let lbIdx=0;
 function openLightbox(i){lbIdx=i;updateLb();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden'}
