@@ -528,7 +528,7 @@ img{max-width:100%;display:block}
 
 <!-- HERO -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="images/03-hop-tai-van-phong.jpg">
+  <video class="hero-video" autoplay muted loop playsinline poster="images/Van%20phong.jpg">
     <source src="videos/hero-tu-van.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
@@ -714,7 +714,7 @@ img{max-width:100%;display:block}
     <div class="about-grid">
       <div class="about-photo-stack reveal left">
         <div class="photo-main">
-          <img src="images/03-hop-tai-van-phong.jpg" alt="Đội ngũ Văn phòng Thừa phát lại An Giang họp tại văn phòng" loading="lazy">
+          <img src="images/Van%20phong.jpg" alt="Văn phòng Thừa phát lại An Giang" loading="lazy">
         </div>
         <div class="photo-badge-logo">
           <img src="images/logo.jpg" alt="Logo VPTPL An Giang">
@@ -774,21 +774,31 @@ img{max-width:100%;display:block}
     </div>
     <div class="gallery-grid">
       <div class="gallery-item reveal" onclick="openLightbox(0)">
-        <img src="images/lapvibang.jpg" alt="Đội ngũ thừa hành viên chuyên nghiệp" loading="lazy">
-        <div class="gallery-overlay"><span class="gallery-caption">Đội ngũ thừa hành viên chuyên nghiệp</span></div>
-        <div class="gallery-icon">👥</div>
-      </div>
-      <div class="gallery-item reveal" style="transition-delay:.1s" onclick="openLightbox(1)">
-        <img src="images/01-trao-tien-cap-doi.jpg" alt="Lập vi bằng giao nhận tiền" loading="lazy">
-        <div class="gallery-overlay"><span class="gallery-caption">Lập vi bằng giao nhận tiền</span></div>
+        <img src="images/lapvibang.jpg" alt="Lập vi bằng thực địa" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Lập vi bằng thực địa</span></div>
         <div class="gallery-icon">📋</div>
       </div>
+      <div class="gallery-item reveal" style="transition-delay:.1s" onclick="openLightbox(1)">
+        <img src="images/giaotien.jpg" alt="Lập vi bằng giao nhận tiền" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Lập vi bằng giao nhận tiền</span></div>
+        <div class="gallery-icon">💰</div>
+      </div>
       <div class="gallery-item reveal" style="transition-delay:.2s" onclick="openLightbox(2)">
-        <img src="images/03-hop-tai-van-phong.jpg" alt="Tư vấn pháp lý tại văn phòng" loading="lazy">
-        <div class="gallery-overlay"><span class="gallery-caption">Tư vấn pháp lý tại văn phòng</span></div>
+        <img src="images/Van%20phong.jpg" alt="Văn phòng Thừa phát lại An Giang" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Văn phòng Thừa phát lại An Giang</span></div>
         <div class="gallery-icon">🏛️</div>
       </div>
-      <div class="gallery-item reveal gallery-logo-card" style="transition-delay:.1s">
+      <div class="gallery-item reveal" onclick="openLightbox(3)">
+        <img src="images/cat%20bang%20khanh%20thanh.jpg" alt="Lễ khánh thành văn phòng" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Lễ khánh thành văn phòng</span></div>
+        <div class="gallery-icon">🎉</div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:.1s" onclick="openLightbox(4)">
+        <img src="images/phat%20bieu.jpg" alt="Phát biểu tại văn phòng" loading="lazy">
+        <div class="gallery-overlay"><span class="gallery-caption">Hoạt động tại văn phòng</span></div>
+        <div class="gallery-icon">🎤</div>
+      </div>
+      <div class="gallery-item reveal gallery-logo-card" style="transition-delay:.2s">
         <div class="gallery-logo-inner">
           <img src="images/logo.jpg" alt="Logo Văn phòng Thừa phát lại An Giang" loading="lazy" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)">
           <p style="color:var(--navy);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;margin-top:14px;text-align:center">VPTPL An Giang</p>
@@ -1142,9 +1152,11 @@ setTimeout(()=>{document.getElementById('chatWidget').classList.add('show')},500
 
 // ═══ LIGHTBOX ═══
 const lbImages=[
-  {src:'images/lapvibang.jpg',cap:'Đội ngũ thừa hành viên chuyên nghiệp'},
-  {src:'images/01-trao-tien-cap-doi.jpg',cap:'Lập vi bằng giao nhận tiền'},
-  {src:'images/03-hop-tai-van-phong.jpg',cap:'Tư vấn pháp lý tại văn phòng'},
+  {src:'images/lapvibang.jpg',cap:'Lập vi bằng thực địa'},
+  {src:'images/giaotien.jpg',cap:'Lập vi bằng giao nhận tiền'},
+  {src:'images/Van%20phong.jpg',cap:'Văn phòng Thừa phát lại An Giang'},
+  {src:'images/cat%20bang%20khanh%20thanh.jpg',cap:'Lễ khánh thành văn phòng'},
+  {src:'images/phat%20bieu.jpg',cap:'Hoạt động tại văn phòng'},
 ];
 let lbIdx=0;
 function openLightbox(i){lbIdx=i;updateLb();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden'}
