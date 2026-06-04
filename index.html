@@ -472,6 +472,9 @@ img{max-width:100%;display:block}
 
 @media(max-width:768px){#videos .section-inner>div[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
 </style>
+<!-- Google tag (gtag.js) - thay G-XXXXXXXXXX bằng mã Google Analytics của bạn -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
 </head>
 <body>
 
@@ -497,6 +500,12 @@ img{max-width:100%;display:block}
   </div>
 </div>
 
+<!-- ANNOUNCEMENT BAR -->
+<div id="announcementBar" style="background:linear-gradient(90deg,#c8102e,#8b0a1f);color:#fff;text-align:center;padding:10px 24px;font-size:.88rem;position:relative;z-index:101">
+  <span>🔔 <strong>Luật 106/2025/QH15</strong> có hiệu lực từ <strong>01/07/2026</strong> — Thừa phát lại được tổ chức thi hành án toàn quốc. 
+  <a href="#services" style="color:#e8c875;font-weight:600;margin-left:8px">Tìm hiểu ngay →</a></span>
+  <button onclick="this.parentElement.style.display='none'" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.7);font-size:1.2rem;cursor:pointer;line-height:1">×</button>
+</div>
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-inner">
@@ -543,6 +552,7 @@ img{max-width:100%;display:block}
       </p>
       <div class="hero-law">
         📜 Hoạt động theo <strong>Luật Thi hành án dân sự số 106/2025/QH15</strong> — Hiệu lực từ ngày <strong>01/07/2026</strong>
+        <span id="countdown" style="display:inline-block;margin-left:10px;background:rgba(212,168,67,.2);padding:2px 10px;border-radius:20px;font-size:.85rem"></span>
       </div>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">📅 Tư vấn miễn phí →</a>
@@ -1027,7 +1037,7 @@ img{max-width:100%;display:block}
         <div class="info-item"><div class="info-icon">🕐</div><div class="info-text"><h4>Giờ làm việc</h4><p>Thứ 2 – Thứ 6: 7:30 – 17:00<br>Thứ 7: 7:30 – 11:30<br><strong>Khẩn cấp: 24/7</strong></p></div></div>
         <div class="info-item"><div class="info-icon">💬</div><div class="info-text"><h4>Zalo / Facebook</h4><a href="https://zalo.me/0945432333" target="_blank">Zalo: 0945 432 333</a><br><a href="https://facebook.com/tranhaiquanag" target="_blank">fb.com/tranhaiquanag</a></div></div>
       </div>
-      <form class="contact-form reveal right" onsubmit="submitForm(event)">
+      <form class="contact-form reveal right" action="https://formspree.io/f/xpwzgkqb" method="POST" onsubmit="submitFormReal(event)">
         <h3>📅 Đặt lịch tư vấn miễn phí</h3>
         <p>Để lại thông tin, chúng tôi sẽ gọi lại trong vòng 30 phút.</p>
         <div class="form-row">
@@ -1050,7 +1060,10 @@ img{max-width:100%;display:block}
           </div>
         </div>
         <div class="form-group"><label>Mô tả vụ việc</label><textarea placeholder="Mô tả ngắn gọn vụ việc của bạn..."></textarea></div>
-        <button type="submit" class="btn-submit">📅 Gửi yêu cầu tư vấn →</button>
+        <input type="hidden" name="_subject" value="Yêu cầu tư vấn mới từ tpltranhaiquan.online">
+        <input type="hidden" name="_replyto" id="reply-email">
+        <input type="hidden" name="_next" value="https://tpltranhaiquan.online/#contact">
+        <button type="submit" class="btn-submit" id="submitBtn">📅 Gửi yêu cầu tư vấn →</button>
         <p style="text-align:center;margin-top:12px;font-size:.8rem;color:var(--gray)">🔒 Thông tin được bảo mật tuyệt đối, không chia sẻ bên thứ ba</p>
       </form>
     </div>
@@ -1059,7 +1072,7 @@ img{max-width:100%;display:block}
 
 <!-- MAP -->
 <div class="map-section">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.9!2d105.23!3d10.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z202+L%C3%AA+L%E1%BB%A3i+An+Ch%C3%A2u!5e0!3m2!1svi!2svn!4v1234567890" allowfullscreen loading="lazy" title="Bản đồ Văn phòng Thừa phát lại An Giang"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.4615!2d105.2196!3d10.5293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0935bc4c9a40f%3A0x1234567890abcdef!2s202%20L%C3%AA%20L%E1%BB%A3i%2C%20An%20Ch%C3%A2u%2C%20Ch%C3%A2u%20Th%C3%A0nh%2C%20An%20Giang!5e0!3m2!1svi!2svn!4v1686000000000" allowfullscreen loading="lazy" title="Bản đồ Văn phòng Thừa phát lại An Giang"></iframe>
 </div>
 
 <!-- FOOTER -->
@@ -1104,7 +1117,7 @@ img{max-width:100%;display:block}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 <strong>Văn phòng Thừa phát lại An Giang</strong> · Tiền thân VPTPL Trần Hải Quân · Hoạt động theo Luật 106/2025/QH15</span>
+      <span>© 2026 <strong>Văn phòng Thừa phát lại An Giang</strong> · Tiền thân VPTPL Trần Hải Quân · MST: 1602153598 · Hoạt động theo Luật 106/2025/QH15 · <a href="mailto:tranhaiquantag@gmail.com" style="color:var(--gold-light)">tranhaiquantag@gmail.com</a></span>
       <div class="footer-badges">
         <span class="footer-badge">🏛️ Bộ Tư pháp cấp phép</span>
         <span class="footer-badge">🛡️ Bảo hiểm nghề nghiệp</span>
@@ -1112,6 +1125,9 @@ img{max-width:100%;display:block}
     </div>
   </div>
 </footer>
+
+<!-- BACK TO TOP -->
+<a href="#" class="float-btn float-top" id="backTop" title="Lên đầu trang" style="position:fixed;right:20px;bottom:150px;z-index:96;display:none;background:var(--navy);width:42px;height:42px;font-size:1rem;animation:none;opacity:.85;text-decoration:none">↑</a>
 
 <!-- FLOATING BUTTONS -->
 <div class="floating">
@@ -1208,6 +1224,28 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('a
 function lbNav(d){lbIdx=(lbIdx+d+lbImages.length)%lbImages.length;updateLb()}
 function updateLb(){const l=lbImages[lbIdx];document.getElementById('lbImg').src=l.src;document.getElementById('lbCaption').textContent=l.cap;document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbImages.length}
 document.addEventListener('keydown',e=>{if(document.getElementById('lightbox').classList.contains('active')){if(e.key==='ArrowLeft')lbNav(-1);else if(e.key==='ArrowRight')lbNav(1);else if(e.key==='Escape')closeLightbox()}});
+
+
+// ═══ COUNTDOWN ═══
+(function(){
+  const target=new Date('2026-07-01T00:00:00+07:00');
+  const el=document.getElementById('countdown');
+  if(!el)return;
+  function update(){
+    const diff=target-new Date();
+    if(diff<=0){el.textContent='✅ Đã có hiệu lực';return;}
+    const d=Math.floor(diff/86400000);
+    el.textContent='⏳ Còn '+d+' ngày';
+  }
+  update();
+  setInterval(update,60000);
+})();
+
+// ═══ BACK TO TOP ═══
+window.addEventListener('scroll',()=>{
+  const bt=document.getElementById('backTop');
+  if(bt){bt.style.display=window.scrollY>600?'flex':'none'}
+},{passive:true});
 
 // ═══ COOKIE CONSENT ═══
 function acceptCookie(){localStorage.setItem('cookieOk','1');document.getElementById('cookieNotice').style.display='none'}
