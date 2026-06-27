@@ -1276,5 +1276,13 @@ if(!localStorage.getItem('cookieOk')){setTimeout(()=>document.getElementById('co
 // ═══ BACK TO TOP ═══
 window.addEventListener('scroll',()=>{const bt=document.querySelector('.float-top');if(bt){if(window.scrollY>500)bt.style.display='flex';else bt.style.display='none'}},{passive:true});
 </script>
+<!-- ===== BANNER DẪN SANG TRANG MỚI thadsangiang.vn ===== -->
+<div id="tsg-newsite-bar" style="position:fixed;left:0;right:0;bottom:0;z-index:999999;background:#0D2B5E;color:#fff;text-align:center;padding:11px 44px 11px 16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;box-shadow:0 -2px 10px rgba(0,0,0,.35)">
+  🔔 Văn phòng đã có <b>website chính thức mới</b>:
+  <a href="https://thadsangiang.vn" style="color:#FFD21E;font-weight:700;text-decoration:underline">thadsangiang.vn</a>
+  — bấm để truy cập trang mới.
+  <span onclick="document.getElementById('tsg-newsite-bar').style.display='none'" title="Đóng" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);cursor:pointer;font-size:18px;opacity:.85">&times;</span>
+</div>
+<!-- ===== HẾT BANNER ===== -->
 </body>
 </html>
